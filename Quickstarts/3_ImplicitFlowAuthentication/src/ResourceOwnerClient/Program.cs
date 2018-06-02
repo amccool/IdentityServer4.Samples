@@ -15,6 +15,10 @@ namespace ResourceOwnerClient
 
         private static async Task MainAsync()
         {
+            Console.WriteLine("hit enter");
+            Console.ReadLine();
+
+
             // discover endpoints from metadata
             var disco = await DiscoveryClient.GetAsync("http://localhost:5000");
             if (disco.IsError)

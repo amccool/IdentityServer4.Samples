@@ -21,7 +21,11 @@ namespace QuickstartIdentityServer
                 .AddInMemoryIdentityResources(Config.GetIdentityResources())
                 .AddInMemoryApiResources(Config.GetApiResources())
                 .AddInMemoryClients(Config.GetClients())
-                .AddTestUsers(Config.GetUsers());
+                .AddTestUsers(Config.GetUsers())
+                //.AddWsFederation()
+                //.AddInMemoryRelyingParties(Config.GetRelyingParties())
+                ;
+            
 
             services.AddAuthentication()
                 .AddGoogle("Google", options =>
